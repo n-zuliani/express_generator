@@ -11,3 +11,9 @@ public: contiene tutti i file statici come i css, script js aggiuntivi e le imma
 In più la suddivisione in file permette all'app.js di eseguire solo la parte di script interessata.
 6) si crea una variabile router che accolga l'istanza di express.Router(); e la si usa per richiamare la funzione get come sempre fatto.
 7) si crea una varibile che importi il file js della route e si usa il comando app.use(urldelroute, variabileroute);
+
+
+
+1) usando il parametro req con il comand req.params
+2) /info?state=nomestato
+3) con la funcione country.info(req.params);
