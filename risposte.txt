@@ -1,0 +1,13 @@
+1) express generator crea uno scheletro di applicazione nodejs
+2) nell'installazione di node generator si usano i parametri  --view=pug --git
+3) views: contiene tutti i file pug che daranno in ouput il codice al loro interno, in particolare layout.pug che contiene il template generale delle pagine html, 
+index.pug che contiene il blocco "contente" che rappresenta il contenuto del template della pagina principale e l'error.pug che viene richiamata nel momento in cui
+le richieste su un url falliscono come nel caso della 404.
+routes: contiene i file js che si occupano di gestire le varie richieste al server, ad esempio index.js si occupa di tutte le richieste in root e users.js si occupa di tutte
+le richieste sotto /users
+public: contiene tutti i file statici come i css, script js aggiuntivi e le immagini.
+4) il file app.js rappresenta il portale delle richieste che poi verranno gestiti dai vari routes ed è il file principale dell'applicazione.
+5) nello sviluppo di un'intera applicazione server il codice diventerebbe smisurato e inoltre per i sottoURL bisognerebbe ripetere ogni volta tutto l'url per intero.
+In più la suddivisione in file permette all'app.js di eseguire solo la parte di script interessata.
+6) si crea una variabile router che accolga l'istanza di express.Router(); e la si usa per richiamare la funzione get come sempre fatto.
+7) si crea una varibile che importi il file js della route e si usa il comando app.use(urldelroute, variabileroute);
