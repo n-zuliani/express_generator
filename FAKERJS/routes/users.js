@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var faker = require('faker');
-
+const fs = require('fs');
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/generate', function(req, res, next) {
  res.send(createFakePerson());
 });
 
@@ -18,6 +18,10 @@ function createFakePerson()
    email:randomEmail,
    card: randomCard
  }
+  
+ let data = JSON.stringify(person);
+ fs.writeFileSync('person.json', data);
+
  return person;
 }
 
