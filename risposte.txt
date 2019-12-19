@@ -17,3 +17,11 @@ In più la suddivisione in file permette all'app.js di eseguire solo la parte di
 1) usando il parametro req con il comand req.params
 2) /info?state=nomestato
 3) con la funcione country.info(req.params);
+
+1) definisce il layout di ogni pagina html
+2) si usa il comando extends layout
+3) is usa :state
+4) req.params ritorna la lista dei paramteri
+5) quando non esiste un valore corrispondente al parametro
+6) la funzione next richiede la generazione dell'errore.
+7) gli errori vengono gestiti dalla librearia http-errors
